@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="serviceApp">
+<head>
+	<meta charset="UTF-8">
+	<!-- BOOTSTRAP -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+
+	<!-- ANGULAR -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
+	<!-- JS -->
+	<script src="../js/script.js"></script>
+
+	
+
+	<title>exo 2 chapitre 3</title>
+</head>
+
+<body ng-controller="ServiceController as services">
+
+	<div class="container">
+		<div class="jumbotron col-md-8 col-md-offset-2">
+			<div class="row">
+				<h1>Services</h1>
+
+
+				<div class="alert alert-info">
+					<p>Choisissez les élements à inclure :
+					<ng-pluralize
+					count="serviceCount"
+					when="{
+					'one':'1 service sélectionné.',
+					'other':'{} services sélectionnés.'
+					}"
+					>
+					</ng-pluralize>
+					</p>
+				</div>
+
+
+				<div class="alert alert-warning" ng-repeat="service in product" ng-click="status = setActive(service)" ng-class="status"fire>
+					<p class="col-md-10">{{service.name}}</p> <p>{{service.price | currency}}</p>
+				</div>
+				<hr>
+
+				<div class="total">
+					<p class="col-md-10"> total</p>
+					<p>{{total}}</p>
+				</div>
+		
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

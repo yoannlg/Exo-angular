@@ -1,0 +1,42 @@
+.jumbotron{
+	background-color: #60A0BB;
+	width: 70%;
+	min-height: 500px;
+	color: white;
+}
+.jumbotron h1{
+	color: white;
+	text-align: center;
+}
+
+.alert-warning{
+	background-color: #777777;
+	color: white;
+	border: none;
+}
+
+.green{
+	background-color: green;
+}
+
+
+a{
+	text-decoration: none;
+	color: inherit;
+}
+a:hover{
+	text-decoration: none;
+	color: inherit;
+}
+a:active:{
+	text-decoration: none;
+	color: inherit;
+}
+a:visited{
+	text-decoration: none;
+	color: inherit;
+}
+a:focus{
+	text-decoration: none;
+	color: inherit;
+}
